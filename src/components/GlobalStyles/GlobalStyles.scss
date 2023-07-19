@@ -1,0 +1,18 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Proxima Nova,wght@0,300;0,400;0,500;0,700;1,600&display=swap');
+
+:root{
+}
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Proxima', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
