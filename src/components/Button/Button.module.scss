@@ -1,0 +1,49 @@
+.wrapper {
+    font-size: 1.6rem;
+    min-width: 100px;
+    border-radius: 4px;
+    padding: 9px 16px;
+    font-weight: 700;
+    background-color: var(--color-white);
+    border: 1px solid transparent;
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+    &.disable{
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+//Button types
+.primary {
+    background-color: var(--primary);
+    color: var(--color-white);
+
+    &:hover {
+        cursor: pointer;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+}
+.outline {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+.text {
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+//Button size
+.small {
+    padding: 4px 16px;
+}
+.large {
+    min-width: 140px;
+    padding: 14px 16px;
+}
