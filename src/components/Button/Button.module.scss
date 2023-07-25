@@ -1,5 +1,8 @@
 .wrapper {
-    font-size: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
     min-width: 100px;
     border-radius: 4px;
     padding: 9px 16px;
@@ -38,7 +41,9 @@
         background-color: rgba(22, 24, 35, 0.03);
     }
 }
-
+.icon + .title,.title + .icon{
+    margin-left: 8px;
+}
 //Button size
 .small {
     padding: 4px 16px;

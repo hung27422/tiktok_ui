@@ -3,11 +3,11 @@ import styles from './Button.module.scss';
 import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
-function Button({ to, href, onclick, primary, text,disable, small, large, outline, children, ...passProps }) {
+function Button({ to, href, onClick, primary, text,disable,leftIcon,rightIcon, small, large, outline, children, ...passProps }) {
     let Comp = 'button';
 
     let props = {
-        onclick,
+        onClick,
         ...passProps
     }
     if(to){
@@ -25,11 +25,15 @@ function Button({ to, href, onclick, primary, text,disable, small, large, outlin
         large,
         text,
         disable,
+        leftIcon,
+        rightIcon,
     });
 
     return (
         <Comp className={classes} {...props}>
-            <span>{children}</span>
+            {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+            <span className={cx('title')}>{children}</span>
+            {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
     );
 }
