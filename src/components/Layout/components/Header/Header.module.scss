@@ -13,6 +13,7 @@
 }
 .inner {
     width: var(--default-layout-width);
+    padding: 0 var(--default-layout-horizontal-spacer);
     height: 100%;
     display: flex;
     justify-content: space-between;
