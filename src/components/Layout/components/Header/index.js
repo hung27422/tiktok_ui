@@ -11,6 +11,7 @@ import AccountItem from '~/components/AccountItem';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import Image from '~/components/Images';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -27,6 +28,7 @@ import {
     faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
 import { faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { IconMessage, IconsInbox } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -133,16 +135,28 @@ function Header() {
                 <div className={cx('action')}>
                     {currentUser ? (
                         <>
-                            <Tippy content="Upload" >
+                            <Tippy content="Upload">
                                 <button className={cx('btn-upload')}>
                                     <img className={cx('img-upload')} src={images.upload} alt="upload" />
                                 </button>
                             </Tippy>
+                            <Tippy content="Tin nhắn">
+                                <button className={cx('btn-upload')}>
+                                    <IconMessage></IconMessage>
+                                </button>
+                            </Tippy>
+                            <Tippy content="Hộp thư">
+                                <button className={cx('btn-upload')}>
+                                    <IconsInbox></IconsInbox>
+                                </button>
+                            </Tippy>
+
                             <Menu items={currentUserMenu}>
-                                <img
+                                <Image
                                     className={cx('img-avt')}
-                                    src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/3bc8b3a79f787079fe6cdade1bcc7c93~c5_720x720.jpeg?x-expires=1690876800&x-signature=Hn%2F13Pn6HDgqljogTqeMOd0LNb4%3D"
+                                    src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/3bc8b3a79f787079fe6cdade1bcc7c93~c5_720x720.jpeg?x-expires=1690876800&x-signature=Hn%2F13Pn6HDgqljogTqeMOd0LNb4%3"
                                     alt="avt"
+                                    fallback="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/3bc8b3a79f787079fe6cdade1bcc7c93~c5_720x720.jpeg?x-expires=1690876800&x-signature=Hn%2F13Pn6HDgqljogTqeMOd0LNb4%3d"
                                 />
                             </Menu>
                         </>

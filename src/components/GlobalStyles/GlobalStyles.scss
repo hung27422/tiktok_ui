@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Proxima Nova,wght@0,300;0,400;0,500;0,700;1,600&display=swap');
 
 :root {
     --primary: #fe2c55;
@@ -22,7 +21,7 @@ html {
 }
 
 body {
-    font-family: 'Proxima', sans-serif;
+    font-family: 'TikTokFont-Regular', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
@@ -30,11 +29,32 @@ body {
 button,input,[tabindex],select,textarea{
     outline: none;
     border: none;
+    font-family: 'TikTokFont-Regular', sans-serif;
 }
 a[href]{
     color: var(--text-color);
     text-decoration: none;
 }
+//Font chữ
+@font-face {
+    font-family: IBM;
+    src: url('/assets/font/IBM.woff2');
+}
+@font-face {
+    font-family: TikTokDisplayFont-Bold;
+    src: url('/assets/font/TikTokDisplayFont-Bold.woff2');
+}
+@font-face {
+    font-family: TikTokFont-Regular;
+    src: url('/assets/font/TikTokFont-Regular.woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: IBM-600;
+    src: url('/assets/font/IBM-600.woff2');
+    font-weight: 600;
+}
+
 
 //Tippy
 body .tippy-box {

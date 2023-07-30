@@ -105,11 +105,18 @@
 .action {
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+.btn-upload{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btn-upload,
 .action-icon {
     background-color: transparent;
     padding: 4px 12px;
+    
 }
 .btn-upload,
 .action-icon,
@@ -118,7 +125,6 @@
 }
 .img-upload {
     position: relative;
-    top: 4px;
     width: 32px;
     height: 32px;
 }
