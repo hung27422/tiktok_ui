@@ -15,7 +15,10 @@
         &:hover {
             background: rgba(22, 24, 35, 0.03);
         }
-    }
+        &.separate{
+            border-top: 1px solid #ccc;
+        }
+    }   
     .menu-popper {
         padding: 10px 0;
     }
@@ -33,6 +36,7 @@
     height: 100%;
     background-color: transparent;
     font-size: 1.6rem;
+    cursor: pointer;
 }
 .header-title{
     position: absolute;
