@@ -5,11 +5,12 @@ import AccountItem from '~/components/AccountItem';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark,faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Search.module.scss';
 import classNames from 'classnames/bind';
 import { IconSearch } from '~/components/Icons';
+import { useDebounce } from '~/hooks';
 
 const cx = classNames.bind(styles);
 function Search() {
@@ -18,22 +19,24 @@ function Search() {
     const [showResults, setShowResults] = useState(true);
     const [loading, setLoading] = useState(false);
 
+    const debounce = useDebounce(searchValue,500);
+
     const ref = useRef();
 
     useEffect(() => {
-        if (!searchValue.trim()) {
-            setSearchResults([])
+        if (!debounce.trim()) {
+            setSearchResults([]);
             return;
         }
         setLoading(true);
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(searchValue)}&type=less`)
+        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounce)}&type=less`)
             .then((response) => response.json())
             .then((response) => {
                 setSearchResults(response.data);
                 setLoading(false);
             })
             .catch(() => setLoading(false));
-    }, [searchValue]);
+    }, [debounce]);
 
     const handleClearSeachValue = () => {
         setSearchValue('');
@@ -76,8 +79,7 @@ function Search() {
                         <FontAwesomeIcon icon={faCircleXmark} />
                     </button>
                 )}
-                {!!loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} /> }
-                
+                {!!loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
 
                 <button className={cx('search-btn')}>
                     <IconSearch></IconSearch>
