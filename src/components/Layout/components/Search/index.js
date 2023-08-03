@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import * as searchService from '~/apiServices/searchServices';
 
 import TippyHeadless from '@tippyjs/react/headless';
 import AccountItem from '~/components/AccountItem';
@@ -19,7 +20,7 @@ function Search() {
     const [showResults, setShowResults] = useState(true);
     const [loading, setLoading] = useState(false);
 
-    const debounce = useDebounce(searchValue,500);
+    const debounce = useDebounce(searchValue, 500);
 
     const ref = useRef();
 
@@ -28,14 +29,16 @@ function Search() {
             setSearchResults([]);
             return;
         }
-        setLoading(true);
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounce)}&type=less`)
-            .then((response) => response.json())
-            .then((response) => {
-                setSearchResults(response.data);
-                setLoading(false);
-            })
-            .catch(() => setLoading(false));
+
+        const fetchApi = async () => {
+            setLoading(true);
+
+            const results = await searchService.search(debounce);
+            setSearchResults(results);
+
+            setLoading(false);
+        };
+        fetchApi();
     }, [debounce]);
 
     const handleClearSeachValue = () => {
