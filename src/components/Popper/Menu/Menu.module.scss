@@ -15,30 +15,34 @@
         &:hover {
             background: rgba(22, 24, 35, 0.03);
         }
-        &.separate{
+        &.separate {
             border-top: 1px solid #ccc;
         }
-    }   
+    }
     .menu-popper {
         padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-body {
+        overflow-y: auto;
     }
 }
 
-
 //Header
-.header{
+.header {
     position: relative;
     height: 50px;
     top: -5px;
 }
-.back-btn{
+.back-btn {
     width: 50px;
     height: 100%;
     background-color: transparent;
     font-size: 1.6rem;
     cursor: pointer;
 }
-.header-title{
+.header-title {
     position: absolute;
     top: 50%;
     left: 50%;
