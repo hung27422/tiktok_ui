@@ -31,9 +31,9 @@ const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
-        title: 'Tiếng Việt',
+        title: 'Ngôn ngữ',
         children: {
-            title: 'Tiếng Việt',
+            title: 'Ngôn ngữ',
             data: [
                 {
                     code: 'en',
