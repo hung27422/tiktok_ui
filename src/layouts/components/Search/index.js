@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import * as searchService from '~/apiServices/searchServices';
+import * as searchService from '~/services/searchServices';
 
 import TippyHeadless from '@tippyjs/react/headless';
 import AccountItem from '~/components/AccountItem';

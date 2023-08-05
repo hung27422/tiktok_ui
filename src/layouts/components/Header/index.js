@@ -10,7 +10,7 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Images';
 import Search from '../Search';
-import routesConfig from '~/configs/routes';
+import config from '~/configs';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -94,11 +94,10 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <Link to={routesConfig.home}>
+                    <Link to={config.router.home}>
                         <img src={images.logo} alt="TikTok" />
                     </Link>
                 </div>
-
                 <Search></Search>
 
                 <div className={cx('action')}>
