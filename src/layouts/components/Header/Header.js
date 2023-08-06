@@ -132,7 +132,7 @@ function Header() {
                     ) : (
                         <>
                             <Button text>Upload</Button>
-                            <Button primary>Log in</Button>
+                            <Button outline to='/'>Log in</Button>
                             <Menu items={MENU_ITEMS} onChange={changeMenuItem}>
                                 <button className={cx('more-btn')}>
                                     <FontAwesomeIcon icon={faEllipsisVertical} />

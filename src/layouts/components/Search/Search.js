@@ -20,12 +20,12 @@ function Search() {
     const [showResults, setShowResults] = useState(true);
     const [loading, setLoading] = useState(false);
 
-    const debounce = useDebounce(searchValue, 500);
+    const debounceValue = useDebounce(searchValue, 500);
 
     const ref = useRef();
 
     useEffect(() => {
-        if (!debounce.trim()) {
+        if (!debounceValue.trim()) {
             setSearchResults([]);
             return;
         }
@@ -33,13 +33,13 @@ function Search() {
         const fetchApi = async () => {
             setLoading(true);
 
-            const results = await searchService.search(debounce);
+            const results = await searchService.search(debounceValue);
             setSearchResults(results);
 
             setLoading(false);
         };
         fetchApi();
-    }, [debounce]);
+    }, [debounceValue]);
 
     const handleClearSeachValue = () => {
         setSearchValue('');
@@ -53,7 +53,7 @@ function Search() {
 
     const handleChange = (e) => {
         const searchValue = e.target.value;
-        if(!searchValue.startsWith(' ')){
+        if (!searchValue.startsWith(' ')) {
             setSearchValue(searchValue);
         }
     };
@@ -90,8 +90,8 @@ function Search() {
                         </button>
                     )}
                     {!!loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
-    
-                    <button className={cx('search-btn')} onMouseDown={e => e.preventDefault()}>
+
+                    <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                         <IconSearch></IconSearch>
                     </button>
                 </div>
