@@ -1,0 +1,63 @@
+.wrapper {
+    border-top: 1px solid #f1f1f2;
+    padding: 16px 0;
+}
+.label {
+    color: #161823bf;
+    font-family: var(--font-family);
+    padding: 0 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.093px;
+}
+.account-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.account-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.account-info {
+    flex: 1;
+    line-height: 1;
+}
+
+.user-name {
+    color: rgb(22, 24, 35);
+    font-family: IBM-600;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.1rem;
+    letter-spacing: 0.03px;
+    margin-top: -2px;
+    max-width: 145px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.account-check {
+    color: #20d5ec;
+    margin-left: 4px;
+    font-size: 14px;
+}
+.name-account {
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 0.161px;
+    line-height: 15px;
+    max-width: 145px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

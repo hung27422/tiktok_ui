@@ -12,6 +12,7 @@ import {
     LiveIconActive,
     DiscoverIconActive,
 } from '~/components/Icons';
+import SuggestAcount from '~/components/SuggestAccount/SuggestAcount';
 const cx = classNames.bind(styles);
 
 function SideBar() {
@@ -38,6 +39,8 @@ function SideBar() {
                 />
                 <MenuItem title="LIVE" to={config.router.live} iconActive={<LiveIconActive />} icon={<LiveIcon />} />
             </Menu>
+            <SuggestAcount label="Các tài khoản đề xuất"></SuggestAcount>
+            <SuggestAcount label="Các tài khoản đang follow"></SuggestAcount>
         </aside>
     );
 }
