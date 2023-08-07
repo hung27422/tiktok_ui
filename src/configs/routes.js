@@ -4,5 +4,7 @@ const router = {
     profile: '/:nickname',
     upload: '/upload',
     search: '/search',
+    live: '/live',
+    discover: '/discover',
 };
-export default router
+export default router;
