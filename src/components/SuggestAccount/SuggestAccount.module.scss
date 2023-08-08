@@ -17,6 +17,10 @@
     align-items: center;
     padding: 8px;
     cursor: pointer;
+    border-radius: 4px;
+    &:hover{
+        background-color: rgba(22, 24, 35, 0.03);
+    }
 }
 
 .account-img {

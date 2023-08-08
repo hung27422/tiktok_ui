@@ -1,0 +1,52 @@
+.wrapper{
+    width: 320px;
+    padding: 20px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.avatar{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.btn-follow{
+    padding: 6px 16px;
+}
+.username{
+
+}
+
+.account{
+
+}
+
+.name{
+
+}
+
+.statistical{
+    margin-top: 8px;
+}
+
+.value ~ .value{
+    margin-left: 16px;
+}
+
+.label{
+    color: #161823bf;
+}
+
+.value{
+
+}
+
+.label{
+
+}
